@@ -6,6 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -37,28 +39,6 @@
     }
     /* Carousel base class */
 
-    .carousel {
-      margin-bottom: 60px;
-    }
-    /* Since positioning the image, we need to help out the caption */
-
-    .carousel-caption {
-      z-index: 1;
-    }
-    /* Declare heights because of positioning of img element */
-
-    .carousel .item {
-      height: 400px;
-      background-color: #555;
-    }
-
-    .carousel img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-height: 400px;
-    }
-
     .navbar {
       margin-bottom: 0;
       background-color: #f4511e;
@@ -85,11 +65,52 @@
       border-color: transparent;
       color: #fff !important;
     }
+
+    .logo {
+      font-size: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+    }
+    * { box-sizing: border-box; }
+
+    body { font-family: sans-serif; }
+
+    .carousel {
+      background: #EEE;
+    }
+
+    .carousel-cell {
+      width: 28%;
+      height: 200px;
+      margin-right: 10px;
+      background: #8C8;
+      border-radius: 5px;
+      counter-increment: carousel-cell;
+    }
+
+    .carousel-cell.is-selected {
+      background: #ED2;
+    }
+
+    /* cell number */
+    .carousel-cell:before {
+      display: block;
+      text-align: center;
+      content: counter(carousel-cell);
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+    }
   </style>
 
 </head>
 
-<bodyid="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -103,57 +124,63 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#services">SERVICE</a></li>
-          <li><a href="#portfolio">PORTFOLIO</a></li>
-          <li><a href="#pricing">PRICING</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#Water Trails">Water Trails</a></li>
+          <li><a href="#Scenic Rivers">Scenic Rivers</a></li>
+          <li><a href="#Know Before You Go">Know Before You Go</a></li>
+          <li><a href="#Contact">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
   <div class="jumbotron text-center">
-    <h1>Company</h1>
-    <p>We specialize in blablabla</p>
+    <h1>TNVWS</h1>
+    <p>Making Edits</p>
     <div class="input-group-btn">
       <button type="button" class="btn btn-danger">Find Your Adventure</button>
     </div>
   </div>
 
+  <div id="Water Trails" class="container-fluid text-center">
+    <h2>Water Trails</h2>
+    <h4>Find your excuse to leave work early here</h4>
+    <br>
+    <!-- Flickity HTML init -->
+<div class="carousel" data-flickity='{ "groupCells": true }'>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+</div>
+
   <!-- Container (About Section) -->
-  <div class="container-fluid">
-    <h2>About Company Page</h2>
-    <h4>Lorem ipsum..</h4>
-    <p>Lorem ipsum..</p>
-    <button class="btn btn-default btn-lg">Get in Touch</button>
+  <div id="Scenic Rivers" class="container-fluid">
+    <h2>Scenic Rivers</h2>
+    <h4>Are larger than creeks..</h4>
+    <p>But smaller than?</p>
+    <button class="btn btn-default btn-lg">Find Your River</button>
   </div>
 
   <div class="container-fluid bg-grey">
-    <h2>Our Values</h2>
-    <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
+    <h2>About our rivers</h2>
+    <h4><strong>What to do:</strong> Our mission lorem ipsum..</h4>
     <p><strong>VISION:</strong> Our vision Lorem ipsum..
   </div>
 
-  <style>
-    .logo {
-      font-size: 200px;
-    }
-
-    @media screen and (max-width: 768px) {
-      .col-sm-4 {
-        text-align: center;
-        margin: 25px 0;
-      }
-    }
-  </style>
-
-  <div class="container-fluid">
+  <div id="Know Before You Go" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
-        <h2>About Company Page</h2>
+        <h2>Know Before You Go</h2>
         <h4>Lorem ipsum..</h4>
         <p>Lorem ipsum..</p>
-        <button class="btn btn-default btn-lg">Get in Touch</button>
+        <button class="btn btn-default btn-lg">Find your Creek</button>
       </div>
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-signal logo"></span>
@@ -174,62 +201,22 @@
     </div>
   </div>
 
-  <div class="container-fluid text-center">
-    <h2>Water Trails</h2>
-    <h4>Find your excuse to leave work early here</h4>
-    <br>
-    <!-- Carousel
-================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="/assets/example/bg_suburb.jpg" style="width:100%" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Bootstrap 3 Carousel Layout</h1>
-              <p></p>
-              <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="http://lorempixel.com/2000/600/abstract/1" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Changes to the Grid</h1>
-              <p>Bootstrap 3 still features a 12-column grid, but many of the CSS class names have completely changed.</p>
-              <p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="http://placehold.it/1500X500" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Percentage-based sizing</h1>
-              <p>With "mobile-first" there is now only one percentage-based grid.</p>
-              <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Controls -->
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="icon-prev"></span>
-  </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="icon-next"></span>
-  </a>
-    </div>
-    <!-- /.carousel -->
-  </div>
+  <footer>
+    <style>
+      footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #f4511e;
+      }
+    </style>
+
+    <footer class="container-fluid text-center">
+      <a href="#myPage" title="To Top">
+  <span class="glyphicon glyphicon-chevron-up"></span>
+</a>
+      <p>Beam me back to the top Scotty <a href="https://www.w3schools.com" title="TVA Other Sites">www.w3schools.com</a></p>
+    </footer>
+  </footer>
 
 </body>
 
