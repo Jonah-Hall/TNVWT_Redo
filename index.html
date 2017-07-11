@@ -5,10 +5,14 @@
   <title>TNVWT</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+
+  <!-- Google jquery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- flickity CDN for Carousel -->
+  <link id="section 2" rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+  <script id="section2" src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+  <!-- Bootstrap CSS and JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <style>
@@ -76,9 +80,15 @@
         margin: 25px 0;
       }
     }
-    * { box-sizing: border-box; }
 
-    body { font-family: sans-serif; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
 
     .carousel {
       background: #EEE;
@@ -92,12 +102,8 @@
       border-radius: 5px;
       counter-increment: carousel-cell;
     }
-
-    .carousel-cell.is-selected {
-      background: #ED2;
-    }
-
     /* cell number */
+
     .carousel-cell:before {
       display: block;
       text-align: center;
@@ -111,7 +117,7 @@
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
+<div id="section 1"/>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -120,13 +126,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">Tennessee Valley Water Trails</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#Water Trails">Water Trails</a></li>
-          <li><a href="#Scenic Rivers">Scenic Rivers</a></li>
-          <li><a href="#Know Before You Go">Know Before You Go</a></li>
+          <li><a href="#WaterTrails">Water Trails</a></li>
+          <li><a href="#ScenicRivers">Scenic Rivers</a></li>
+          <li><a href="#KBYG">Know Before You Go</a></li>
           <li><a href="#Contact">Contact Us</a></li>
         </ul>
       </div>
@@ -140,83 +146,85 @@
       <button type="button" class="btn btn-danger">Find Your Adventure</button>
     </div>
   </div>
+</div>
 
-  <div id="Water Trails" class="container-fluid text-center">
+<div id="section 2">
+  <div id="WaterTrails" class="container-fluid text-center">
     <h2>Water Trails</h2>
     <h4>Find your excuse to leave work early here</h4>
     <br>
     <!-- Flickity HTML init -->
-<div class="carousel" data-flickity='{ "groupCells": true }'>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
+    <div class="carousel" data-flickity='{ "groupCells": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
 </div>
+    <!-- Container (About Section) -->
+    <div id="ScenicRivers" class="container-fluid">
+      <h2>Scenic Rivers</h2>
+      <h4>Are larger than creeks..</h4>
+      <p>But smaller than?</p>
+      <button class="btn btn-default btn-lg">Find Your River</button>
+    </div>
 
-  <!-- Container (About Section) -->
-  <div id="Scenic Rivers" class="container-fluid">
-    <h2>Scenic Rivers</h2>
-    <h4>Are larger than creeks..</h4>
-    <p>But smaller than?</p>
-    <button class="btn btn-default btn-lg">Find Your River</button>
-  </div>
+    <div class="container-fluid bg-grey">
+      <h2>About our rivers</h2>
+      <h4><strong>What to do:</strong> Our mission lorem ipsum..</h4>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum..
+    </div>
 
-  <div class="container-fluid bg-grey">
-    <h2>About our rivers</h2>
-    <h4><strong>What to do:</strong> Our mission lorem ipsum..</h4>
-    <p><strong>VISION:</strong> Our vision Lorem ipsum..
-  </div>
-
-  <div id="Know Before You Go" class="container-fluid">
-    <div class="row">
-      <div class="col-sm-8">
-        <h2>Know Before You Go</h2>
-        <h4>Lorem ipsum..</h4>
-        <p>Lorem ipsum..</p>
-        <button class="btn btn-default btn-lg">Find your Creek</button>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-signal logo"></span>
+    <div id="KBYG" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2>Know Before You Go</h2>
+          <h4>Lorem ipsum..</h4>
+          <p>Lorem ipsum..</p>
+          <button class="btn btn-default btn-lg">Find your Creek</button>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-signal logo"></span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="container-fluid bg-grey">
-    <div class="row">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-globe logo"></span>
-      </div>
-      <div class="col-sm-8">
-        <h2>Our Values</h2>
-        <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
-        <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+    <div id="Contact" class="container-fluid bg-grey">
+      <div class="row">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-globe logo"></span>
+        </div>
+        <div class="col-sm-8">
+          <h2>Our Values</h2>
+          <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
+          <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <footer>
-    <style>
-      footer .glyphicon {
-        font-size: 20px;
-        margin-bottom: 20px;
-        color: #f4511e;
-      }
-    </style>
+    <footer>
+      <style>
+        footer .glyphicon {
+          font-size: 20px;
+          margin-bottom: 20px;
+          color: #f4511e;
+        }
+      </style>
 
-    <footer class="container-fluid text-center">
-      <a href="#myPage" title="To Top">
+      <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
   <span class="glyphicon glyphicon-chevron-up"></span>
 </a>
-      <p>Beam me back to the top Scotty <a href="https://www.w3schools.com" title="TVA Other Sites">www.w3schools.com</a></p>
+        <p>Beam me back to the top Scotty <a href="https://www.tva.gov/" title="TVA Other Sites">TVA Homepage</a></p>
+      </footer>
     </footer>
-  </footer>
 
 </body>
 
