@@ -112,6 +112,26 @@
       font-size: 80px;
       color: white;
     }
+    .img-wrapper {
+      position: relative;
+    }
+
+    .img-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .img-overlay:before {
+      content: ' ';
+      display: block;
+      /* adjust 'height' to position overlay content vertically */
+      height: 50%;
+    }
+
   </style>
 
 </head>
@@ -168,19 +188,29 @@
       <div class="carousel-cell"></div>
     </div>
 </div>
-    <!-- Container (About Section) -->
-    <div id="ScenicRivers" class="container-fluid">
-      <h2>Scenic Rivers</h2>
-      <h4>Are larger than creeks..</h4>
-      <p>But smaller than?</p>
-      <button class="btn btn-default btn-lg">Find Your River</button>
-    </div>
+    <!-- Container Scenic River Section) -->
+
+<div id="ScenicRivers" class="container-fluid">
+      <h1 class="text-center">Scenic Rivers</h1>
+
+  <div class="img-wrapper">
+    <img class="img-responsive center-block" src="https://ak8.picdn.net/shutterstock/videos/4012198/thumb/1.jpg?i10c=img.resize">
+      <div class="img-overlay">
+        <button class="btn btn-md btn-success">Find out more</button>
+      </div>
+      <p> "The Tennessee Scenic Rivers Program is intended to preserve and protect the free flowing,
+        unpolluted and outstanding scenic, recreational, geologic, botanical, fish, wildlife, historic or cultural
+        values of selected rivers or river segments in the state." </p>
+  </div>
+</div>
 
     <div class="container-fluid bg-grey">
       <h2>About our rivers</h2>
       <h4><strong>What to do:</strong> Our mission lorem ipsum..</h4>
       <p><strong>VISION:</strong> Our vision Lorem ipsum..
     </div>
+
+    <!-- Container Know Before You Go Section) -->
 
     <div id="KBYG" class="container-fluid">
       <div class="row">
