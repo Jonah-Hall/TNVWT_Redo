@@ -5,23 +5,106 @@
   <title>TNVWT</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google jquery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Homebrew CSS page -->
-  <link type="text/css" rel="stylesheet" href="./IGT_Work/homebrewstyle.css"></link>
-  <!-- flickity CDN for Carousel -->
-  <link id="section 2" rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
-  <script id="section2" src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+  <!-- CSS sheets -->
+  <!-- Compiled minified CSS and JavaScript for materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <!-- Bootstrap CSS and JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <style>
+    .jumbotron {
+      background-color: #6b6d6a;
+      color: #ffffff;
+    }
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+    .btn {
+      background-color: #f0aa02;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .container-fluid {
+      padding: 60px 50px;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+    }
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+    }
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+    .logo {
+      font-size: 200px;
+    }
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    .img-wrapper {
+      position: relative;
+    }
+    .img-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+    .img-overlay:before {
+      content: ' ';
+      display: block;
+      /* adjust 'height' to position overlay content vertically */
+      height: 50%;
+    }
+    #KBYG {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+  </style>
+  <script>
+    $('.carousel.carousel-slider').carousel({
+      fullWidth: true
+    });
+  </script>
 
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-  <div id="section 1" />
+  <div/>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -52,90 +135,105 @@
   </div>
   </div>
 
-  <div id="section 2">
+  <div>
     <div id="WaterTrails" class="container-fluid text-center">
       <h2>Water Trails</h2>
       <h4>Find your excuse to leave work early here</h4>
+    </div>
+  </div>
       <br>
-      <!-- Flickity HTML init -->
-      <div class="carousel" data-flickity='{ "groupCells": true }'>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-      </div>
-    </div>
-    <!-- Container Scenic River Section) -->
-
-    <div id="ScenicRivers" class="container-fluid bg-grey">
-      <h1 class="text-center">Scenic Rivers</h1>
-
-      <div class="img-wrapper">
-        <img class="img-responsive center-block" src="https://ak8.picdn.net/shutterstock/videos/4012198/thumb/1.jpg?i10c=img.resize">
-        <div class="img-overlay">
-          <button class="btn btn-md btn-success">Find out more</button>
+  <div class="carousel carousel-slider center" data-indicators="true">
+        <div class="carousel-fixed-item center">
+        <a class="btn waves-effect white grey-text darken-text-2">button</a>
         </div>
-        <p> "The Tennessee Scenic Rivers Program is intended to preserve and protect the free flowing, unpolluted and outstanding scenic, recreational, geologic, botanical, fish, wildlife, historic or cultural values of selected rivers or river segments in
-          the state." </p>
-      </div>
-    </div>
-
-    <div class="container-fluid bg-grey">
-      <h2>About our rivers</h2>
-      <h4><strong>What to do:</strong> Our mission lorem ipsum..</h4>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum..
-    </div>
-
-    <!-- Container Know Before You Go Section) -->
-
-    <div id="KBYG" class="container-fluid">
-      <div class="row">
-        <div class="col-sm-8">
-          <h2 align="center">Know Before You Go</h2>
-          <h4 align="center" ;style="color:red;"><u>WARNING</u>:PADDLE AT YOUR OWN RISK.</h4>
-          <p>Lorem ipsum..</p>
-          <button class="btn btn-default btn-lg">Find out more</button>
+        <div class="carousel-item red white-text" href="#one!">
+          <h2>First Panel</h2>
+          <p class="white-text">This is your first panel</p>
+        </div>
+        <div class="carousel-item amber white-text" href="#two!">
+          <h2>Second Panel</h2>
+          <p class="white-text">This is your second panel</p>
+        </div>
+        <div class="carousel-item green white-text" href="#three!">
+          <h2>Third Panel</h2>
+          <p class="white-text">This is your third panel</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#four!">
+          <h2>Fourth Panel</h2>
+          <p class="white-text">This is your fourth panel</p>
         </div>
       </div>
-    </div>
 
-    <div id="Contact" class="container-fluid bg-grey">
-      <div class="row">
-        <div class="col-sm-4">
-          <span class="glyphicon glyphicon-globe logo"></span>
-        </div>
-        <div class="col-sm-8">
-          <h2>Our Values</h2>
-          <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
-          <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
-        </div>
+
+  <!-- Container Scenic River Section) -->
+
+  <div id="ScenicRivers" class="container-fluid">
+    <h1 class="text-center">Scenic Rivers</h1>
+
+    <div class="img-wrapper">
+      <img class="img-responsive center-block" src="https://ak8.picdn.net/shutterstock/videos/4012198/thumb/1.jpg?i10c=img.resize">
+      <div class="img-overlay">
+        <button class="btn btn-md btn-success">Find out more</button>
       </div>
+      <p> "The Tennessee Scenic Rivers Program is intended to preserve and protect the free flowing, unpolluted and outstanding scenic, recreational, geologic, botanical, fish, wildlife, historic or cultural values of selected rivers or river segments in
+        the state." </p>
     </div>
+  </div>
 
-    <footer>
-      <style>
-        footer .glyphicon {
-          font-size: 20px;
-          margin-bottom: 20px;
-          color: #f4511e;
-        }
-      </style>
+  <div class="container-fluid bg-grey">
+    <h2>About our rivers</h2>
+    <h4><strong>What to do:</strong> Our mission lorem ipsum..</h4>
+    <p><strong>VISION:</strong> Our vision Lorem ipsum..
+  </div>
 
-      <footer class="container-fluid text-center">
-        <a href="#myPage" title="To Top">
+  <!-- Container Know Before You Go Section) -->
+
+  <div id="KBYG" class="container-fluid">
+    <div class="row">
+      <h2 style="padding-top:10px;padding-bottom:10px;">Know Before You Go</h2>
+      <h4 style="color:red;padding-top:10px;padding-bottom:10px;"><u>WARNING</u>:PADDLE AT YOUR OWN RISK.</h4>
+      <b>TVA, the State of Tennessee, and other project affiliates are not responsible for your personal safety, vehicle, damage to you, your boat, or your personal property. Boating involves some risk of drowning, injury or death.</b>
+    </div>
+    <div class="row">
+      <button class="btn btn-default btn-lg" style="padding:10px;">Find out more</button>
+    </div>
+  </div>
+
+  <div id="Contact" class="container-fluid bg-grey">
+    <div class="row">
+      <h2>Contact Us</h2>
+    </div>
+  </div>
+
+  <footer>
+    <style>
+      footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #f4511e;
+      }
+    </style>
+
+    <footer class="container-fluid text-center">
+      <a href="#myPage" title="To Top">
   <span class="glyphicon glyphicon-chevron-up"></span>
 </a>
-        <p>Beam me back to the top Scotty <a href="https://www.tva.gov/" title="TVA Other Sites">TVA Homepage</a></p>
-      </footer>
+      <p>Beam me back to the top Scotty <a href="https://www.tva.gov/" title="TVA Other Sites">TVA Homepage</a></p>
     </footer>
+  </footer>
 
+  <script>
+    <!-- -->
+    <
+    script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" >
+  </script>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <!-- Bootstrap 3.x -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </script>
 </body>
 
 </html>
