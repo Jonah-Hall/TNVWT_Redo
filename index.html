@@ -27,7 +27,7 @@
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 16px;
+      font-size: 12px;
       margin: 4px 2px;
       cursor: pointer;
     }
@@ -36,12 +36,12 @@
     }
     .navbar {
       margin-bottom: 0;
-      background-color: #f4511e;
+      background-color: #0071BC;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
       line-height: 1.42857143 !important;
-      letter-spacing: 4px;
+      letter-spacing: 2px;
       border-radius: 0;
     }
     .navbar li a,
@@ -50,7 +50,7 @@
     }
     .navbar-nav li a:hover,
     .navbar-nav li.active a {
-      color: #f4511e !important;
+      color: #0071BC !important;
       background-color: #fff !important;
     }
     .navbar-default .navbar-toggle {
@@ -70,7 +70,7 @@
       box-sizing: border-box;
     }
     body {
-      font-family: sans-serif;
+      font-family: "Tahoma", "Geneva", sans-serif;
     }
     .img-wrapper {
       position: relative;
@@ -95,16 +95,11 @@
       text-align: center;
     }
   </style>
-  <script>
-    $('.carousel.carousel-slider').carousel({
-      fullWidth: true
-    });
-  </script>
 
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-  <div/>
+  <div>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -125,14 +120,13 @@
       </div>
     </div>
   </nav>
+  </div>
 
   <div class="jumbotron text-center">
-    <h1>TNVWS</h1>
-    <p>Making Edits</p>
+    <img src="http://geoportal.utc.edu/blueway/photos/general/explore.png" alt="top banner" style="margin:50px 50px">
     <div class="input-group-btn">
       <button type="button" class="btn btn-danger">Find Your Adventure</button>
     </div>
-  </div>
   </div>
 
   <div>
@@ -142,25 +136,28 @@
     </div>
   </div>
       <br>
+
+      <!-- Start of Materialize Code -->
+
   <div class="carousel carousel-slider center" data-indicators="true">
         <div class="carousel-fixed-item center">
-        <a class="btn waves-effect white grey-text darken-text-2">button</a>
+        <a class="btn waves-effect white grey-text darken-text-2">View Map</a>
         </div>
-        <div class="carousel-item red white-text" href="#one!">
-          <h2>First Panel</h2>
-          <p class="white-text">This is your first panel</p>
+        <div class="carousel-item blue white-text" href="#one!">
+        <h2>Wolf River</h2>
+        <img src="http://geoportal.utc.edu/blueway/photos/wolf/GhostSection.jpg" alt="Wolf River" style="width:100%,height:80px">
         </div>
-        <div class="carousel-item amber white-text" href="#two!">
-          <h2>Second Panel</h2>
-          <p class="white-text">This is your second panel</p>
+        <div class="carousel-item blue white-text" href="#two!">
+            <h2>Tennessee River</h2>
+        <img src="http://geoportal.utc.edu/blueway/photos/lowertn/lowtn7.jpg" alt="TN River" style="width:100%,height:80px">
         </div>
-        <div class="carousel-item green white-text" href="#three!">
-          <h2>Third Panel</h2>
-          <p class="white-text">This is your third panel</p>
+        <div class="carousel-item blue white-text" href="#three!">
+            <h2>Mill Creek</h2>
+        <img src="http://geoportal.utc.edu/blueway/photos/mill/mill_1.jpg" alt="Mill Creek" style="width:100%,height:80px">
         </div>
         <div class="carousel-item blue white-text" href="#four!">
-          <h2>Fourth Panel</h2>
-          <p class="white-text">This is your fourth panel</p>
+          <h2>Duck River</h2>
+          <img src="http://geoportal.utc.edu/blueway/photos/duck/duckriver.jpg" alt="Duck River" style="width:100%,height:80px">
         </div>
       </div>
 
@@ -210,7 +207,7 @@
       footer .glyphicon {
         font-size: 20px;
         margin-bottom: 20px;
-        color: #f4511e;
+        color: #0071BC;
       }
     </style>
 
@@ -222,18 +219,21 @@
     </footer>
   </footer>
 
-  <script>
-    <!-- -->
-    <
-    script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" >
-  </script>
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!--  -->
   <!-- Bootstrap 3.x -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 
+
+    <!-- Start of Materialize JS carousel -->
+
+  <script>
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
   </script>
+
 </body>
 
 </html>
