@@ -103,12 +103,15 @@
       margin: auto;
       text-align: center;
     }
+    /* carousel css code. can adjust height and width */
     .carousel {
-      width: 75%;
+      width: 900px;
+      height: 450px !important;
       margin: auto;
     }
-    .carousel-item.blue.white-text {
 
+    .carousel-item.blue.white-text {
+      height: auto;
     }
   </style>
 
@@ -157,7 +160,7 @@
 
   <div class="carousel carousel-slider center" data-indicators="true">
     <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">View Map</a>
+      <a id="carouselbtn" class="btn waves-effect white grey-text darken-text-2">View Map</a>
     </div>
     <div class="carousel-item blue white-text" href="#one!">
       <h2>Wolf River</h2>
