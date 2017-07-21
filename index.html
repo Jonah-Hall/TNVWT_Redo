@@ -17,12 +17,23 @@
       color: #ffffff;
     }
 
+    .jumbotron img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px;
+    }
+
+    .jumbotron a {
+      width: 200px;
+      position: relative;
+    }
+
     .bg-grey {
       background-color: #f6f6f6;
     }
 
     .btn {
-      background-color: #f0aa02;
       border: none;
       color: white;
       padding: 15px 32px;
@@ -104,9 +115,10 @@
       text-align: center;
     }
     /* carousel css code. can adjust height and width */
+
     .carousel {
-      width: 900px;
-      height: 450px !important;
+      max-width: 900px;
+      max-height: 450px !important;
       margin: auto;
     }
 
@@ -142,9 +154,9 @@
   </div>
 
   <div class="jumbotron text-center">
-    <img src="http://geoportal.utc.edu/blueway/photos/general/explore.png" alt="top banner" style="margin:50px 50px">
-    <div class="input-group-btn">
-      <button type="button" class="btn btn-danger">Find Your Adventure</button>
+    <img class="img-responsive center" src="http://geoportal.utc.edu/blueway/photos/general/explore.png" alt="top banner"></img>
+    <div>
+      <a class="waves-effect waves-light btn">Find Your Adventure</a>
     </div>
   </div>
 
